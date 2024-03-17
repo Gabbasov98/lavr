@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="vacancies.html" style="display: block; margin-bottom: 20px;">
+            Вакансии
+        </a>
+        <a href="history.html" style="display: block; margin-bottom: 20px;">
+            История компании
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="why.html" style="display: block; margin-bottom: 20px;">
+            Почему выбирают нас
+        </a>
+        <a href="news.html" style="display: block; margin-bottom: 20px;">
+            Новости
+        </a>
+        <a href="news-item.html" style="display: block; margin-bottom: 20px;">
+            Новости 2
+        </a>
+
+
+
+
+        <button data-modal="workModal" style="border: 2px solid #fff; color: #fff; margin-bottom: 20px;">
+            Хотите работать у нас
+        </button>
+        <button data-modal="newsModal" style="border: 2px solid #fff; color: #fff; margin-bottom: 20px;">
+            Статья
+        </button>
+        <button data-modal="cityModal" style="border: 2px solid #fff; color: #fff; margin-bottom: 20px;">
+            Выбор города:
+        </button>
+        <button data-modal="reviewModal" style="border: 2px solid #fff; color: #fff; margin-bottom: 20px;">
+            Оставить отзыв
+        </button>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="modal" id="workModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.78141 20.0001C4.62687 20.0001 4.47579 19.9543 4.34729 19.8685C4.21878 19.7826 4.11862 19.6606 4.05948 19.5178C4.00033 19.3751 3.98486 19.2179 4.01502 19.0664C4.04518 18.9148 4.11961 18.7756 4.2289 18.6663L18.6666 4.22861C18.8132 4.08208 19.0119 3.99976 19.2191 3.99976C19.4264 3.99976 19.6251 4.08208 19.7716 4.22861C19.9182 4.37515 20.0005 4.57389 20.0005 4.78112C20.0005 4.98835 19.9182 5.18709 19.7716 5.33363L5.33392 19.7713C5.26143 19.844 5.1753 19.9016 5.08048 19.9408C4.98567 19.9801 4.88403 20.0002 4.78141 20.0001Z" fill="black" />
+                    <path d="M19.2191 20.0001C19.1165 20.0002 19.0148 19.9801 18.92 19.9408C18.8252 19.9016 18.7391 19.844 18.6666 19.7713L4.22886 5.33363C4.08232 5.18709 4 4.98835 4 4.78112C4 4.57389 4.08232 4.37515 4.22886 4.22861C4.37539 4.08208 4.57413 3.99976 4.78136 3.99976C4.9886 3.99976 5.18734 4.08208 5.33387 4.22861L19.7716 18.6663C19.8809 18.7756 19.9553 18.9148 19.9855 19.0664C20.0156 19.2179 20.0002 19.3751 19.941 19.5178C19.8819 19.6606 19.7817 19.7826 19.6532 19.8685C19.5247 19.9543 19.3736 20.0001 19.2191 20.0001Z" fill="black" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Хотите работать у нас
+                </div>
+                <div class="modal__desc p-text">
+                    Оставьте заявку и мы с вами свяжемся
+                </div>
+            </div>
+            <form action="" class="modal-form">
+                <div class="fg">
+                    <input type="text" placeholder="Имя">
+                </div>
+                <div class="fg">
+                    <input type="tel" placeholder="+7 000 000 00 00">
+                </div>
+                <div class="fg">
+                    <input type="text" placeholder="Город">
+                </div>
+                <div class="fg">
+                    <textarea placeholder="Опыт работы"></textarea>
+                </div>
+                <button class="modal-form__btn m-btn m-btn-black">
+                    <span>Отправить</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal news-modal" id="newsModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.78141 20.0001C4.62687 20.0001 4.47579 19.9543 4.34729 19.8685C4.21878 19.7826 4.11862 19.6606 4.05948 19.5178C4.00033 19.3751 3.98486 19.2179 4.01502 19.0664C4.04518 18.9148 4.11961 18.7756 4.2289 18.6663L18.6666 4.22861C18.8132 4.08208 19.0119 3.99976 19.2191 3.99976C19.4264 3.99976 19.6251 4.08208 19.7716 4.22861C19.9182 4.37515 20.0005 4.57389 20.0005 4.78112C20.0005 4.98835 19.9182 5.18709 19.7716 5.33363L5.33392 19.7713C5.26143 19.844 5.1753 19.9016 5.08048 19.9408C4.98567 19.9801 4.88403 20.0002 4.78141 20.0001Z" fill="black" />
+                    <path d="M19.2191 20.0001C19.1165 20.0002 19.0148 19.9801 18.92 19.9408C18.8252 19.9016 18.7391 19.844 18.6666 19.7713L4.22886 5.33363C4.08232 5.18709 4 4.98835 4 4.78112C4 4.57389 4.08232 4.37515 4.22886 4.22861C4.37539 4.08208 4.57413 3.99976 4.78136 3.99976C4.9886 3.99976 5.18734 4.08208 5.33387 4.22861L19.7716 18.6663C19.8809 18.7756 19.9553 18.9148 19.9855 19.0664C20.0156 19.2179 20.0002 19.3751 19.941 19.5178C19.8819 19.6606 19.7817 19.7826 19.6532 19.8685C19.5247 19.9543 19.3736 20.0001 19.2191 20.0001Z" fill="black" />
+                </svg>
+            </button>
+            <div class="news-modal__img">
+                <img src="img/news4.webp" alt="">
+            </div>
+            <div class="news-modal__content">
+                <div class="news-modal__title h2">
+                    Как привлекать потенциальных клиентов в банк
+                </div>
+                <div class="news-modal__text text">
+                    <p>
+                        Как привлекать потенциальных клиентов в банк <br>
+                    В современном мире банкам приходится тяжело конкурировать за внимание клиентов. <br>
+                    Однако есть несколько проверенных способов привлечения новых пользователей. <br>
+                    Персонализация предложений – ключ к сердцу клиента. Используйте данные для создания индивидуальных услуг
+                    и продуктов, которые отвечают конкретным потребностям каждого.
+                    </p>
+                    <p>
+                        Цифровое присутствие – ваш сайт и мобильное приложение должны быть не только функциональными, но и удобными
+                        для пользователя. Инвестируйте в UX/UI дизайн и обеспечьте безопасность онлайн-операций. <br>
+                    Социальные сети и контент-маркетинг – активно используйте платформы для общения с аудиторией. Обучающий контент, полезные статьи помогут установить доверительные отношения с потенциальными клиентами.
+                        <br>
+                    Лояльность и реферальные программы – предоставляйте бонусы за привлечение новых клиентов и разработайте программы лояльности для поощрения постоянства.
+                    </p>
+                    <p>
+                        И помните: каждый клиент ценит индивидуальный подход, безопасность своих финансов и качество обслуживания.
+                        <br>
+                    Уделите этим аспектам особое внимание, чтобы выделиться на фоне конкурентов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal city-modal" id="cityModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.78141 20.0001C4.62687 20.0001 4.47579 19.9543 4.34729 19.8685C4.21878 19.7826 4.11862 19.6606 4.05948 19.5178C4.00033 19.3751 3.98486 19.2179 4.01502 19.0664C4.04518 18.9148 4.11961 18.7756 4.2289 18.6663L18.6666 4.22861C18.8132 4.08208 19.0119 3.99976 19.2191 3.99976C19.4264 3.99976 19.6251 4.08208 19.7716 4.22861C19.9182 4.37515 20.0005 4.57389 20.0005 4.78112C20.0005 4.98835 19.9182 5.18709 19.7716 5.33363L5.33392 19.7713C5.26143 19.844 5.1753 19.9016 5.08048 19.9408C4.98567 19.9801 4.88403 20.0002 4.78141 20.0001Z" fill="black" />
+                    <path d="M19.2191 20.0001C19.1165 20.0002 19.0148 19.9801 18.92 19.9408C18.8252 19.9016 18.7391 19.844 18.6666 19.7713L4.22886 5.33363C4.08232 5.18709 4 4.98835 4 4.78112C4 4.57389 4.08232 4.37515 4.22886 4.22861C4.37539 4.08208 4.57413 3.99976 4.78136 3.99976C4.9886 3.99976 5.18734 4.08208 5.33387 4.22861L19.7716 18.6663C19.8809 18.7756 19.9553 18.9148 19.9855 19.0664C20.0156 19.2179 20.0002 19.3751 19.941 19.5178C19.8819 19.6606 19.7817 19.7826 19.6532 19.8685C19.5247 19.9543 19.3736 20.0001 19.2191 20.0001Z" fill="black" />
+                </svg>
+            </button>
+            <div class="city-modal__grid">
+                <div class="city-modal__col">
+                    <div class="h2">
+                        Выбор города:
+                    </div>
+                    <div class="city-modal__items">
+                        <a href="" class="city-modal__item _active">Тамбов</a>
+                        <a href="" class="city-modal__item">Тула</a>
+                        <a href="" class="city-modal__item">Ростов-на-Дону</a>
+                        <a href="" class="city-modal__item">Ростов</a>
+                        <a href="" class="city-modal__item">Воронеж</a>
+                        <a href="" class="city-modal__item">Липецк</a>
+                        <a href="" class="city-modal__item">Ярославль</a>
+                        <a href="" class="city-modal__item">Волгоград</a>
+                        <a href="" class="city-modal__item">Владимир</a>
+                        <a href="" class="city-modal__item">Нижний Новгород</a>
+                        <a href="" class="city-modal__item">Саратов</a>
+                    </div>
+                </div>
+                <div class="city-modal__col2">
+                    <form action="" class="modal-form">
+                        <div class="modal-form__top">
+                            <div class="modal-form__title">
+                                Вашего города нет в списке?
+                            </div>
+                            <div class="modal-form__desc p-text">
+                                Подайте заявку на партнерство с нами
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                        <div class="fg">
+                            <input type="tel" placeholder="+7 000 000 00 00">
+                        </div>
+                        <div class="fg">
+                            <input type="text" placeholder="Город">
+                        </div>
+                        <div class="fg">
+                            <textarea placeholder="Опыт работы"></textarea>
+                        </div>
+                        <button class="modal-form__btn m-btn m-btn-black-outline">
+                            <span>Отправить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal review-modal" id="reviewModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="review-modal__top">
+                <div class="h2">
+                    Оставить отзыв
+                </div>
+                <button class="close-btn _close-modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.78141 20.0001C4.62687 20.0001 4.47579 19.9543 4.34729 19.8685C4.21878 19.7826 4.11862 19.6606 4.05948 19.5178C4.00033 19.3751 3.98486 19.2179 4.01502 19.0664C4.04518 18.9148 4.11961 18.7756 4.2289 18.6663L18.6666 4.22861C18.8132 4.08208 19.0119 3.99976 19.2191 3.99976C19.4264 3.99976 19.6251 4.08208 19.7716 4.22861C19.9182 4.37515 20.0005 4.57389 20.0005 4.78112C20.0005 4.98835 19.9182 5.18709 19.7716 5.33363L5.33392 19.7713C5.26143 19.844 5.1753 19.9016 5.08048 19.9408C4.98567 19.9801 4.88403 20.0002 4.78141 20.0001Z" fill="black" />
+                        <path d="M19.2191 20.0001C19.1165 20.0002 19.0148 19.9801 18.92 19.9408C18.8252 19.9016 18.7391 19.844 18.6666 19.7713L4.22886 5.33363C4.08232 5.18709 4 4.98835 4 4.78112C4 4.57389 4.08232 4.37515 4.22886 4.22861C4.37539 4.08208 4.57413 3.99976 4.78136 3.99976C4.9886 3.99976 5.18734 4.08208 5.33387 4.22861L19.7716 18.6663C19.8809 18.7756 19.9553 18.9148 19.9855 19.0664C20.0156 19.2179 20.0002 19.3751 19.941 19.5178C19.8819 19.6606 19.7817 19.7826 19.6532 19.8685C19.5247 19.9543 19.3736 20.0001 19.2191 20.0001Z" fill="black" />
+                    </svg>
+                </button>
+            </div>
+
+            <form action="" class="review-form">
+                <div class="fg">
+                    <input type="text" placeholder="Имя">
+                </div>
+                <div class="fg">
+                    <input type="tel" placeholder="+7 000 000 00 00">
+                </div>
+                <div class="fg">
+                    <input type="text" placeholder="Город">
+                </div>
+                <div class="fg">
+                    <input type="text" placeholder="Заголовок отзыва">
+                </div>
+                <div class="fg _full">
+                    <textarea placeholder="Опыт работы"></textarea>
+                </div>
+                <div class="review-form__nav _full">
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>Нажимая кнопку заказать звонок, вы <br> соглашаетесь с политикой конфиденциальности</span>
+                        </label>
+                    </div>
+
+                    <button class="review-form__btn m-btn m-btn-black-outline">
+                        <span>Отправить отзыв</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
